@@ -69,7 +69,7 @@
 			<ul class="nav" id="side-menu">
 				<li class="sidebar-search">
 					<div class="input-group custom-search-form">
-						<form action="php/search.php" method="POST">
+						<form action="search.php" method="POST">
 							<input type="text" name="search" placeholder="Search...">
 								<span class="input-group-btn">
 									<button class="btn btn-primary" name="submit-search" type="submit">

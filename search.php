@@ -1,5 +1,5 @@
 <?php
-    include 'includes/dbh.inc.php';
+    include 'php/includes/dbh.inc.php';
 ?>
 
 <div class="container-fluid">
