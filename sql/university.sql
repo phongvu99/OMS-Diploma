@@ -134,7 +134,7 @@ CREATE TABLE IF NOT EXISTS `profile` (
   `nationality` varchar(255) NOT NULL,
   `ethnicity` varchar(255) NOT NULL,
   `mail` varchar(255) NOT NULL,
-  `phoneNum` int(11) NOT NULL,
+  `phoneNum` varchar(11) NOT NULL,
   `martialStatus` enum('single','married') NOT NULL,
   `address` varchar(255) NOT NULL,
   `city` varchar(255) NOT NULL,

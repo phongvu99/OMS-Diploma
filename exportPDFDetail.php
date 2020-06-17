@@ -1,7 +1,6 @@
 <?php   
     include_once 'php/includes/dbh.inc.php';
     include 'php/mpdf/vendor/autoload.php';
-    include 'php/header.php';
 
     $row = [];
     $row1 = [];
@@ -72,7 +71,7 @@
             'default_font' => 'freesans'
         ]);
 
-        $mpdf->SetDefaultBodyCSS('background', "url('../Bac1.png')");
+        $mpdf->SetDefaultBodyCSS('background', "url('Bac1.png')");
         $mpdf->SetDefaultBodyCSS('background-image-resize', 6);
     
         $htm = '<h1>GGG</h1>';
