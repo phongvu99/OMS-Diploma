@@ -1,0 +1,57 @@
+\documentclass[a4paper]{article}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{helvet}
+enewcommand{amilydefault}{\sfdefault}
+\usepackage[vietnamese]{babel}
+\usepackage[top=2cm, bottom=2cm, outer=0cm, inner=0cm]{geometry}
+\begin{document}
+\pagenumbering{gobble}
+	ikz[remember picture,overlay] 
+ode[opacity=1,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{master.png}};
+
+space{7.8cm}
+\begin{center}
+Căn cứ kết quả hoàn thành chương trình đào tạo được xây dựng và hợp tác với các trường đại học Pháp:\Paris, University of Paris-Nord \\documentclass[a4paper]{article}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{helvet}
+enewcommand{amilydefault}{\sfdefault}
+\usepackage[vietnamese]{babel}
+\usepackage[top=2cm, bottom=2cm, outer=0cm, inner=0cm]{geometry}
+\begin{document}
+\pagenumbering{gobble}
+	ikz[remember picture,overlay] 
+ode[opacity=1,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{master.png}};
+
+space{7.8cm}
+\begin{center}
+Căn cứ kết quả hoàn thành chương trình đào tạo được xây dựng và hợp tác với các trường đại học Pháp:\Paris, University of Paris-Nord \\documentclass[a4paper]{article}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{helvet}
+enewcommand{amilydefault}{\sfdefault}
+\usepackage[vietnamese]{babel}
+\usepackage[top=2cm, bottom=2cm, outer=0cm, inner=0cm]{geometry}
+\begin{document}
+\pagenumbering{gobble}
+	ikz[remember picture,overlay] 
+ode[opacity=1,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{master.png}};
+
+space{7.8cm}
+\begin{center}
+Căn cứ kết quả hoàn thành chương trình đào tạo được xây dựng và hợp tác với các trường đại học Pháp:\Paris, University of Paris-Nord \\documentclass[a4paper]{article}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{helvet}
+enewcommand{amilydefault}{\sfdefault}
+\usepackage[vietnamese]{babel}
+\usepackage[top=2cm, bottom=2cm, outer=0cm, inner=0cm]{geometry}
+\begin{document}
+\pagenumbering{gobble}
+	ikz[remember picture,overlay] 
+ode[opacity=1,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{master.png}};
+
+space{7.8cm}
+\begin{center}
+Căn cứ kết quả hoàn thành chương trình đào tạo được xây dựng và hợp tác với các trường đại học Pháp:\Paris, University of Paris-Nord \

@@ -1,0 +1,22 @@
+h1 {
+    visibility: hidden;
+}
+.table1 {
+    margin-top: 480px;
+    margin-left: 70px;
+}
+
+.note1 {
+    margin-top: 7px;
+    margin-left: 80px;
+}
+
+.note2 {
+    margin-left: 150px;
+}
+
+.QRcode {
+    width: 10%;
+    height: 10%;
+    margin-left: 70px;
+}
