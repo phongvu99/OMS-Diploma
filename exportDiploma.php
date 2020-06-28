@@ -44,7 +44,7 @@
                         $sql = "SELECT * FROM diploma";
                         $result = mysqli_query($conn, $sql);
                         while ($row = mysqli_fetch_assoc($result)) {
-                            echo '<h3>'.$row['id']." ".$row['studentId'].'</h3><h3><a href="exportPDFDetail.php?edit='.$row['studentId'].'">Export</a></h3><br />';
+                            echo '<h3>'.$row['id']." ".$row['studentId'].'</h3><h3><a href="exportDiplomaDetail.php?edit='.$row['studentId'].'">Export</a></h3><br />';
                         }
                     ?>
                     </div>

@@ -69,7 +69,7 @@ include 'php/header.php';
 										<form action="" method="post" name="frmExcelImport" id="frmExcelImport" enctype="multipart/form-data">
 											<div>
 												<input type="file" name="file" id="file" accept=".xls,.xlsx"> <p></p>									
-												<button type="submit" id="submit" name="import" class="btn btn-primary">Import File</button>
+												<button type="submit" id="submit" name="import" class="btn btn-primary">Import Diploma</button>
 											</div>
 									
 										</form>
@@ -81,10 +81,6 @@ include 'php/header.php';
 							
 						</div>
 					</div>
-					<?php 		
-						if (isset($_POST["import"]))
-						{
-					?>		
 					<div class="col-lg-12">
 						<div class="panel panel-primary">
 							<div class="panel-heading" >
@@ -96,10 +92,10 @@ include 'php/header.php';
 
 							<div class="table-responsive">
 							<table class="table">
-							
-								
-								
-							<?php				
+					<?php 		
+						if (isset($_POST["import"]))
+						{
+						
 							$allowedFileType = ['application/vnd.ms-excel','text/xls','text/xlsx','application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'];
 							if(in_array($_FILES["file"]["type"],$allowedFileType)){
 								$targetPath = 'uploads/'.$_FILES['file']['name'];
@@ -159,16 +155,13 @@ include 'php/header.php';
 									$i = $i + 1;
 								}
 							}
+						}
+
 						
-						?>
+					?>
 								</tbody>
 							</table>
-							
-				
-						<?php
-						}
-						
-						?>			
+								
 						</div>
 						
 					</div>

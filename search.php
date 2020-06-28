@@ -13,6 +13,8 @@
             OR profile.country LIKE '%$search%' OR profile.dob LIKE '%$search%' OR profile.ethnicity LIKE '%$search%'
             OR profile.fullName LIKE '%$search%' OR profile.mail LIKE '%$search%' OR profile.nationality LIKE '%$search%'
             OR profile.phoneNum LIKE '%$search%'
+
+            -- OR department.departmentName LIKE '%$search%'
             
 
             ";
@@ -24,7 +26,7 @@
 
             if ($queryResult > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<a href='detailSearch.php?id=".$row['id']."'<div class='article-box'>
+                    echo "<a href='searchDetail.php?id=".$row['id']."'<div class='article-box'>
                     <h3>".$row['fullName']."</h3>
                     </div></a>";
                 }

@@ -29,28 +29,20 @@
             <div class="row">
 			
                 <div class="col-lg-12">
-                    <h1 class="page-header" style="color:#337ab7">Edit Bachelor Information </h1>
+                    <h1 class="page-header" style="color:#337ab7">Export Information </h1>
 					<div class="panel-body">
 						<div class="row">
 
 							<!-- main form end -->
-							
+							<div>
+							    <a href="exportDiploma.php"><button class="btn btn-primary">Export Diploma</button></a>
+								<a href="exportLetter.php"><button class="btn btn-success">Export Attestation Letter</button></a>
+							    <a href="exportCourseReport.php"><button class="btn btn-danger">Export Transcript</button></a>
+							</div>
 							
 						</div>
-
-
-                    <h1>List of students... </h1>
-                    <?php   
-                        $sql = "SELECT * FROM profile";
-                        $result = mysqli_query($conn, $sql);
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo '<h3>'.$row['id']." ".$row['fullName'].'</h3><h3><a href="editStudentDetail.php?edit='.$row['id'].'">edit</a></h3><br />';
-                        }
-                    ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-

@@ -43,6 +43,7 @@
                         <div class="table-responsive">
                             <table class="table" border="1">
                                 <tr class="success">
+                                    <th></th>
                                     <th>ID</th>
                                     <th>Full Name</th>
                                     <th>Full Name in Vietnamese </th>
@@ -68,22 +69,23 @@
 
                                     while ($row = mysqli_fetch_assoc($result)) {
                                         echo '<tr>
-                                        <th>'.$row['id'].'</th>
-                                        <th>'.$row['fullName'].'</th>
-                                        <th>'.$row['fullName_v'].'</th>
-                                        <th>'.$row['gender'].'</th>
-                                        <th>'.$row['dob'].'</th>
-                                        <th>'.$row['dob_v'].'</th>
-                                        <th>'.$row['pob'].'</th>
-                                        <th>'.$row['pob_v'].'</th>
-                                        <th>'.$row['address'].'</th>
-                                        <th>'.$row['city'].'</th>
-                                        <th>'.$row['country'].'</th>
-                                        <th>'.$row['ethnicity'].'</th>
-                                        <th>'.$row['martialStatus'].'</th>
-                                        <th>'.$row['nationality'].'</th>
-                                        <th>'.$row['phoneNum'].'</th>
-                                        <th>'.$row['mail'].'</th>
+                                        <td><a href="editStudentDetail.php?edit='.$row['id'].'">Edit</a>
+                                        <td>'.$row['id'].'</td>
+                                        <td>'.$row['fullName'].'</td>
+                                        <td>'.$row['fullName_v'].'</td>
+                                        <td>'.$row['gender'].'</td>
+                                        <td>'.$row['dob'].'</td>
+                                        <td>'.$row['dob_v'].'</td>
+                                        <td>'.$row['pob'].'</td>
+                                        <td>'.$row['pob_v'].'</td>
+                                        <td>'.$row['address'].'</td>
+                                        <td>'.$row['city'].'</td>
+                                        <td>'.$row['country'].'</td>
+                                        <td>'.$row['ethnicity'].'</td>
+                                        <td>'.$row['martialStatus'].'</td>
+                                        <td>'.$row['nationality'].'</td>
+                                        <td>'.$row['phoneNum'].'</td>
+                                        <td>'.$row['mail'].'</td>
                                     </tr>';
                                     }
                         

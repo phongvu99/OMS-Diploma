@@ -187,6 +187,7 @@ CREATE TABLE IF NOT EXISTS `transcript` (
   `student_id` varchar(11) NOT NULL,
   `year_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
+  KEY `student_id` (`student_id`),
   KEY `year_id` (`year_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -201,7 +202,8 @@ CREATE TABLE IF NOT EXISTS `transcript_detail` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `transcript_id` int(11) NOT NULL,
   `etcCredists` int(11) NOT NULL,
-  `gpaGrade` int(11) NOT NULL,
+  `USTH_Grade` varchar(11) NOT NULL,
+  `gpaGrade` varchar(11) NOT NULL,
   `notes` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `transcript_id` (`transcript_id`)
@@ -231,7 +233,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 DROP TABLE IF EXISTS `year`;
 CREATE TABLE IF NOT EXISTS `year` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `year` int(11) NOT NULL,
+  `year` varchar(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -298,7 +300,8 @@ ALTER TABLE `student`
 -- Constraints for table `transcript`
 --
 ALTER TABLE `transcript`
-  ADD CONSTRAINT `transcript_ibfk_1` FOREIGN KEY (`year_id`) REFERENCES `year` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `transcript_ibfk_1` FOREIGN KEY (`year_id`) REFERENCES `year` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `transcript_ibfk_2` FOREIGN KEY (`student_id`) REFERENCES `student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `transcript_detail`

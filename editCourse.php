@@ -1,6 +1,5 @@
-
-<?php   
-    include_once "php/includes/dbh.inc.php";
+<?php
+    ob_start();
     include 'php/header.php';
 ?>
 
@@ -39,19 +38,79 @@
 							
 						</div>
 
+                <?php   
+                    include_once 'php/includes/dbh.inc.php';
 
-                    <h1>List of students... </h1>
-                    <?php   
-                        $sql = "SELECT * FROM course";
+                    if (isset($_GET['edit'])) {
+                        $id = $_GET['edit'];
+                        $res = mysqli_query($conn, "SELECT * FROM course WHERE id='$id'");
+                        $row = mysqli_fetch_assoc($res);
+                    }
+
+                    if (isset($_POST['submit'])) {
+                        $id = $_POST['id'];
+                        $courseName = $_POST['courseName'];
+                        $courseName_v = $_POST['courseName_v'];
+                        $courseCode = $_POST['courseCode'];
+                        $summary = $_POST['summary'];
+                        $totalHour = $_POST['totalHour'];
+                        $lectureHour = $_POST['lectureHour'];
+                        $labHour = $_POST['labHour'];
+        
+                        $sql = "UPDATE course
+                                SET id='$id', courseName='$courseName', courseName_v = '$courseName_v', courseCode = '$courseCode',
+                                summary = '$summary', totalHour = '$totalHour', lectureHour = '$lectureHour', labHour = '$labHour'
+                                WHERE id='$id' ";
                         $result = mysqli_query($conn, $sql);
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo '<h3>'.$row['id']." ".$row['courseName'].'</h3><h3><a href="editCourseDetail.php?edit='.$row['id'].'">edit</a></h3><br />';
-                        }
-                    ?>
+                        header("Location: viewCourse.php");
+                        ob_end_flush();
+
+                    }
+                ?>
+
+                <form action="editCourseDetail.php" method="POST">
+                    <div class = 'table-responsive' >
+                        <table class="table" border="1" style="width: 50%; margin-left: 100px">
+                            <tr>
+                                <th class="success">ID</th>
+                                <th><input name="id" value="<?php echo $row['id']; ?>"></th>
+                            </tr>
+                            <tr>
+                                <th class="success">Course Name</th>
+                                <th><input name="courseName" value="<?php echo $row['courseName']; ?>"></th>
+                            </tr>
+                            <tr>
+                                <th class="success">Course Name in Vietnamese </th>
+                                <th><input name="courseName_v" value="<?php echo $row['courseName_v']; ?>"></th>
+                            </tr>
+                            <tr>
+                                <th class="success">Course Code</th>
+                                <th><input name="courseCode" value="<?php echo $row['courseCode']; ?>"></th>
+                            </tr>
+                            <tr>
+                                <th class="success">Summary</th>
+                                <th><input name="summary" value="<?php echo $row['summary']; ?>"></th>
+                            </tr>
+                            <tr>
+                                <th class="success">Total Hour </th>
+                                <th><input name="totalHour" value="<?php echo $row['totalHour']; ?>"></th>
+                            <tr>
+                                <th class="success">Lecture Hour</th>
+                                <th><input name="lectureHour" value="<?php echo $row['lectureHour']; ?>"></th>
+                            <tr>
+                                <th class="success">Lab Hour</th>
+                                <th><input name="labHour" value="<?php echo $row['labHour']; ?>"></th>
+                        </table>                        
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
+                    <input type="submit" name="submit" value="Update" style="margin-left: 100px">
+                </form>
+                    </div>
+						
+					</div>
+							<!-- notification panel end -->
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>

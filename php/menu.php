@@ -80,49 +80,19 @@
 					</div>
 				</li>
 				<li>
-					<a><i class="fa fa-th-large fa-fw"></i> Student <span class="fa arrow"></span></a>
+					<a><i class="fa fa-th-large fa-fw"></i> Bachelor <span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level">
 						<li>
-							<a href="viewStudent.php">View</a>
+							<a href="view.php">View/Edit</a>
 							
 						</li>
 						<li>
-							<a href="editStudent.php">Edit</a>
+							<a href="import.php">Import</a>
 							
 						</li>
 						<li>
-							<a href="importStudent.php">Import</a>
-							
+							<a href="export.php">Export</a>
 						</li>	
-					</ul>
-				</li>
-				<li>
-					<a><i class="fa fa-th-large fa-book"></i> Course <span class="fa arrow"></span></a>
-					<ul class="nav nav-second-level">
-						<li>
-							<a href="viewCourse.php">View</a>
-							
-						</li>
-						<li>
-							<a href="editCourse.php">Edit</a>
-							
-						</li>
-						<li>
-							<a href="importCourse.php">Import</a>
-							
-						</li>	
-					</ul>
-				</li>
-				<li>
-					<a><i class="fa fa-th-large fa-trophy"></i> Diploma <span class="fa arrow"></span></a>
-					<ul class="nav nav-second-level">
-						<li>
-							<a href="importDiploma.php">Import</a>
-							
-						</li>	
-						<li>
-							<a href="exportPDF.php">Export</a>
-						</li>
 					</ul>
 				</li>
 

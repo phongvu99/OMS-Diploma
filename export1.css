@@ -1,0 +1,23 @@
+h1 {
+    visibility: hidden;
+}
+
+.current {
+    margin-top: 100px;
+    text-align: right;
+    font-style: normal;
+}
+
+.title {
+    text-align: center;
+    font-style: normal;
+}
+.table1 {
+    margin-left: 70px;
+}
+
+.cu {
+    text-align: right;
+    font-style: normal;
+}
+
