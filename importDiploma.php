@@ -6,7 +6,6 @@ $db = "university";
 $conn = mysqli_connect($server,$user,$password,$db);
 require_once('php/php-excel-reader/excel_reader2.php');
 require_once('php/SpreadsheetReader.php');
-require_once('php/diversity.php');
 include 'php/header.php';
 
 ?>

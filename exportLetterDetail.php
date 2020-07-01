@@ -58,7 +58,6 @@
         $degree = "Bachelor (full-time)";
 
         
-        
                     
 
         //Start to export PDF here

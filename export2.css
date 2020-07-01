@@ -1,0 +1,31 @@
+.vis {
+    visibility: hidden;
+}
+
+.current {
+    text-align: right;
+}
+
+.title {
+    text-align: center;
+}
+
+.title1 {
+    text-align: center;
+    margin-left: 100px;
+}
+
+.table1 {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.tb1 {
+    font-size: larger;
+}
+
+
+.cu {
+    text-align: right;
+}
+

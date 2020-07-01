@@ -77,7 +77,7 @@
                     }
                 ?>
 
-                <form action="editStudentDetail.php" method="POST">
+                <form action="editStudent.php" method="POST">
                     <div class = 'table-responsive' >
                         <table class="table" border="1" style="width: 50%; margin-left: 100px">
                             <tr>

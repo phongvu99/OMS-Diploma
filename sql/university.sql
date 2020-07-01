@@ -38,9 +38,10 @@ CREATE TABLE IF NOT EXISTS `course` (
   `courseCode` varchar(255) NOT NULL,
   `sumarry` text NOT NULL,
   `acaYear` varchar(255) NOT NULL,
-  `totalHour` time NOT NULL,
-  `lectureHour` time NOT NULL,
-  `labHour` time NOT NULL,
+  `totalHour` int NOT NULL,
+  `lectureHour` int NOT NULL,
+  `labHour` int NOT NULL,
+  `ECTS` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `major_id` (`major_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

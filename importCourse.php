@@ -6,7 +6,6 @@ $db = "university";
 $conn = mysqli_connect($server,$user,$password,$db);
 require_once('php/php-excel-reader/excel_reader2.php');
 require_once('php/SpreadsheetReader.php');
-require_once('php/diversity.php');
 
 include 'php/header.php';
 
@@ -127,7 +126,7 @@ include 'php/header.php';
 											echo '<tr class="warming">';
 										}
 										echo '<td><form method="post" action="printb.php?id='.$Row[0].'" target="_blank"></td>';
-										for ($k = 0; $k <= 8; $k++) {
+										for ($k = 0; $k <= 9; $k++) {
 											
 											
 											echo '<td>'.$Row[$k].'</td>';
@@ -145,9 +144,10 @@ include 'php/header.php';
 										$totalHour = mysqli_real_escape_string($conn,$Row[6]);
 										$lectureHour = mysqli_real_escape_string($conn,$Row[7]);
 										$labHour = mysqli_real_escape_string($conn,$Row[8]);
+										$ECTS = mysqli_real_escape_string($conn, $Row[9]);
 									
-										$query = "insert into course(id,major_id,courseName, courseName_v,courseCode,summary, totalHour,lectureHour, labHour) 
-										values('".$course_id."','".$major_id."','".$courseName."','".$courseName_v."','".$courseCode."','".$summary."','".$totalHour."','".$lectureHour."','".$labHour."')";
+										$query = "insert into course(id,major_id,courseName, courseName_v,courseCode,summary, totalHour,lectureHour, labHour, ECTS) 
+										values('".$course_id."','".$major_id."','".$courseName."','".$courseName_v."','".$courseCode."','".$summary."','".$totalHour."','".$lectureHour."','".$labHour."','".$ECTS."')";
 										$result = mysqli_query($conn, $query);
 										echo '</tr>';		
 									}

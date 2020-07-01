@@ -120,6 +120,7 @@
                                                 <th>Total Hour </th>
                                                 <th>Lecture Hour</th>
                                                 <th>Lab Hour</th>
+                                                <th>ECTS</th>
                                             </tr>';
 
                                         $major_id = $_POST['second_level'];
@@ -140,6 +141,7 @@
                                             <td>'.$row['totalHour'].'</td>
                                             <td>'.$row['lectureHour'].'</td>
                                             <td>'.$row['labHour'].'</td>
+                                            <td>'.$row['ECTS'].'</td>
                                         </tr>';
                                     }
 

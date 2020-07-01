@@ -56,10 +56,11 @@
                         $totalHour = $_POST['totalHour'];
                         $lectureHour = $_POST['lectureHour'];
                         $labHour = $_POST['labHour'];
+                        $ECTS = $_POST['ECTS'];
         
                         $sql = "UPDATE course
                                 SET id='$id', courseName='$courseName', courseName_v = '$courseName_v', courseCode = '$courseCode',
-                                summary = '$summary', totalHour = '$totalHour', lectureHour = '$lectureHour', labHour = '$labHour'
+                                summary = '$summary', totalHour = '$totalHour', lectureHour = '$lectureHour', labHour = '$labHour', ECTS = '$ECTS'
                                 WHERE id='$id' ";
                         $result = mysqli_query($conn, $sql);
                         header("Location: viewCourse.php");
@@ -68,7 +69,7 @@
                     }
                 ?>
 
-                <form action="editCourseDetail.php" method="POST">
+                <form action="editCourse.php" method="POST">
                     <div class = 'table-responsive' >
                         <table class="table" border="1" style="width: 50%; margin-left: 100px">
                             <tr>
@@ -94,12 +95,19 @@
                             <tr>
                                 <th class="success">Total Hour </th>
                                 <th><input name="totalHour" value="<?php echo $row['totalHour']; ?>"></th>
+                            </tr>
                             <tr>
                                 <th class="success">Lecture Hour</th>
                                 <th><input name="lectureHour" value="<?php echo $row['lectureHour']; ?>"></th>
+                            </tr>
                             <tr>
                                 <th class="success">Lab Hour</th>
                                 <th><input name="labHour" value="<?php echo $row['labHour']; ?>"></th>
+                            </tr>
+                            <tr>
+                                <th class="success">ECTS</th>
+                                <th><input name="ECTS" value="<?php echo $row['ECTS']; ?>"></th>
+                            </tr>
                         </table>                        
                     </div>
                     <input type="submit" name="submit" value="Update" style="margin-left: 100px">

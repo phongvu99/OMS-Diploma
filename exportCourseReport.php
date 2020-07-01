@@ -4,7 +4,7 @@
     include 'php/header.php';
 ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
@@ -88,7 +88,7 @@
 							
 						</div>
 
-                    <form role="form" action="exportCourseReport.php" method="post"> 
+                    <form role="form" action="exportCourseReportDetail.php" method="post"> 
 
                         <h3>Select Student ID</h3>
                         <select class="form-control" name="student" id="student" multi class="form-control">
@@ -124,7 +124,7 @@
                         </select>
 
                         <h3>Select Year Position</h3>
-                        <select id="year_position" name="year_position" multiple class="form-control">
+                        <select id="year_position" name="year_position" class="form-control">
 
                             <option value="1.">Bachelor - 1</option>
                             <option value="2.">Bachelor - 2</option>
@@ -138,21 +138,7 @@
 
                         <button class="btn btn-danger" name="choose">Choose</button> 
                     </form>
-                    <?php   
-                        if (isset($_POST['choose'])) {
-                            $major_id = $_POST['second_level'];
-
-                            $student_id = $_POST['student'];
-
-                            $year_position = $_POST['year_position'];
-
-                            //Find transcript detail ID 
-
-                            $sql = "SELECT * FROM transcript WHERE ";
-
-
-                        }
-                    ?>
+                    
                     </div>
                 </div>
             </div>
