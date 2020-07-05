@@ -1,0 +1,19 @@
+{
+    "name": "vutuanphong/oh-my-shite",
+    "description": "OMS-Diploma administration system.",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "phongvu99",
+            "email": "phongvu99@outlook.com"
+        }
+    ],
+    "require": {
+        "mpdf/mpdf": "^8.0",
+        "ext-mysqli": "*"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.5.5",
+        "phpdocumentor/phpdocumentor": "2.*"
+    }
+}
